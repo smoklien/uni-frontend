@@ -1,0 +1,13 @@
+# Microsoft Word documents
+*.docx
+
+# files starting with '~' (temporary files)
+~*
+
+# Visual Studio Code settings
+.vscode
+
+# Additional information and code
+sample
+
+# Additional Ignore Patterns (if needed)
