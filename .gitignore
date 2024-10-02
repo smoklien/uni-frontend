@@ -8,7 +8,7 @@
 .vscode
 
 # Additional information and code
-docs/
 sample/
+assets/
 
 # Additional Ignore Patterns (if needed)
