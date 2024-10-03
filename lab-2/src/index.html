@@ -4,48 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="First Lab with HTML">
-    <meta name="keywords" content="HTML">
-    <meta name="author" content="Piddubnyi">
+    <meta name="description" content="Second Lab with HTML">
+    <meta name="keywords" content="HTML, CSS">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Piddubnyi B.S., IP-24</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Lab 2</title>
 </head>
 
 <body>
-    <div>
-        <h2>Piddubnyi B.S.</h2>
-        <h3>About me</h3>
-        <p>I was Born on sunny day upon the Dnipro river's shore.</p>
-        <p>During my childhood i was visiting a default public school. Now I am studying at the Kyiv Polytechnic Institute.</p>
+    <!-- Table for student and lab info -->
+    <table>
+        <tr class="student-info-row">
+            <td></td>
+            <td></td>
+            <td colspan="2" rowspan="2">Piddubnyi</td>
+            <td colspan="2">B.</td>
+            <td colspan="2" rowspan="2">S.</td>
+        </tr>
+        <tr class="lab-info-row">
+            <td colspan="2">IP-24</td>
+            <td colspan="2">Lab 2, Task 4</td>
+        </tr>
+        <tr class="empty-row">
+            <td colspan="2"></td>
+            <td colspan="6"></td>
+        </tr>
+    </table>
+
+    <!-- Circle with cross (created with positions) -->
+    <div class="position outer circle">
+        <div class="position middle circle">
+            <div class="position inner circle"></div>
+            <div class="position horizontal line"></div>
+            <div class="position vertical line"></div>
+        </div>  
+    </div>
+      
+    <!-- Circle with cross (created with transform values) -->
+    <div class="transform outer circle">
+        <div class="transform middle circle">
+            <div class="transform inner circle"></div>
+            <div class="transform horizontal line"></div>
+            <div class="transform vertical line"></div>
+        </div>  
     </div>
 
-    <div>
-        <h3>My Hobbies</h3>
-        <ul>
-            <li>Photography and photo editing.</li>
-            <li>Cycling.</li>
-            <li>Enjoying pleasent architecture and nature.</li>
-        </ul>
-    </div>
-
-    <div>
-        <h3>Favourite movies</h3>
-        <ol>
-            <li>Showshank Redemption.</li>
-            <li>Forrest Gump.</li>
-            <li>The Departed.</li>
-        </ol>
-    </div>
-
-    <div>
-        <p>
-            I visited a couple corners of the Europe therefore I cannot give any convenient answers.
-            But for this little moment I prefer Kyiv for living due to its transport system <i>(subway, speed trams etc.)</i>,
-            rich architecture, opportunities and safeness
-        </p>
-        <a href="https://guide.kyivcity.gov.ua/"><img src="http://www.bestkievguide.com/wp-content/uploads/2016/02/kievcity.jpeg" alt="Photo of Kyiv"></a>
-    </div>
 </body>
 
 </html>

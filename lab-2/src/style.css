@@ -1,0 +1,127 @@
+table {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    border-collapse: collapse;
+    width: 700px;
+    height: 4em;
+    table-layout: fixed;
+}
+
+td {
+    border: 1px solid rgb(46, 46, 46);
+    empty-cells: show;
+    height: 1.5em;
+}
+
+.student-info-row, .lab-info-row {
+    transition: background-color 0.3s;
+}
+
+.student-info-row {
+    color: #0B0B09;
+    background-color: #048f8f;
+}
+.student-info-row:hover {
+    color: #1E105B;
+    background-color: #f5f504;
+}
+
+.lab-info-row {
+    color: #1E105B;
+    background-color: #f5f504;
+}
+.lab-info-row:hover {
+    color: #0B0B09;
+    background-color: #048f8f;
+}
+
+.circle {
+    border-radius: 50%;
+    margin: 0;
+}
+
+.outer {
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+.middle {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+}
+
+.inner {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+
+.line {
+    background-color: rgb(0, 0, 0);
+}
+
+.vertical{
+    width: 250px;
+    height: 10px;
+}
+
+.horizontal {
+    width: 10px;
+    height: 250px;
+}
+
+.position.outer {
+    position: absolute;
+    top: 170px;
+    left:30px;
+}
+
+.position.middle {
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+.position.inner {
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+.position.horizontal {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -5px;
+
+}
+  
+.position.vertical {
+    position: absolute;
+    top: 75px;
+    left: -50px;
+    margin-top: -5px;
+}
+
+.transform.outer {
+    transform: translate(350px, 44.8px);
+}
+
+.transform.middle {
+    transform: translate(25px, 25px);
+}
+
+.transform.inner {
+    transform: translate(25px, 25px);
+}
+
+.transform.horizontal {
+    transform: translate(70px, -150px);
+}
+
+.transform.vertical {
+    transform: translate(-50px, -280px);
+}

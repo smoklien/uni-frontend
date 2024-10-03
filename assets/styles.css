@@ -98,7 +98,7 @@ body {
 .button {
     padding: 0.9em 1.6em;
     font-size: 1.3rem;
-    background-color: #bcbcbc84;
+    background-color: #bcbcbc80;
     color: rgb(242, 242, 242);
     border-radius: 1rem;
     cursor: pointer;
@@ -109,5 +109,5 @@ body {
 }
 
 .button:hover {
-    background-color: #666666;
+    background-color: #bcbcbc;
 }
