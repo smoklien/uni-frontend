@@ -7,14 +7,13 @@ This repository contains the source code for my Basic Front End Technologies lab
 - `lab`: **Front End** labs.
 - `index.html`: Index file for the GitHub Pages website.
 - `assets`: Asset files for the website.
-- `.gitignore`: Files or folders to ignore.
 
 # Getting Started
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/smoklien/kpi-front-end.git
+   git clone https://github.com/smoklien/uni-frontend.git
    ```
 
 2. Navigate to the project directory:
@@ -29,4 +28,4 @@ This repository contains the source code for my Basic Front End Technologies lab
 
 4. Website:
   
-   To access all labs in one place, visit [GitHub Pages](https://smoklien.github.io/kpi-front-end/).
+   To access all labs in one place, visit [GitHub Pages](https://smoklien.github.io/uni-frontend/).
