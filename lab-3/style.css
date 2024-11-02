@@ -1,0 +1,163 @@
+/* * {
+    outline: 1px solid red;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+    width: 100%;
+    color: #212121;
+    background-color: #efefef;
+    display: flow-root;
+}
+
+.side-bar {
+    height: 110vh;
+    width: 30%;
+    float: left;
+    transform: scaleX(-1);
+    background: url('assets/teletower.jpg') no-repeat center / cover;
+}
+
+.main-content {
+    float: left;
+    font-family: Quicksand, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.main-content .heading {
+    margin: 5rem 0 0 5rem;
+    font-size: 12em;
+    font-weight: 300;
+    font-family: Staatliches, Arial sans-serif;
+}
+
+.main-content p {
+    margin-left: 6rem;
+    font-size: 2em;
+}
+
+.bottom-content {
+    height: 90vh;
+    width: 100%;
+    text-align: center;
+    line-height: 90vh;
+    background: url('assets/unit-city.jpg') center / cover;
+}
+
+.button {
+    padding: 5rem 7rem;
+    display: inline-block;
+    font-size: 5em;
+    text-decoration: none;
+    font-family: Quicksand, Arial, sans-serif;
+    font-weight: 300;
+    color: #d4eae0;
+    line-height: 2rem;
+    background-color: rgba(42, 58, 65, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: rgba(42, 58, 65, 0.7);
+}
+
+.copyright-content {
+    background-color: #212121;
+    color: #acacac;
+    padding: 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Toggle button */
+.toggle-layout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+#layoutToggle {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #212121;
+    background-color: #efefef;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#layoutToggle:hover {
+    background-color: #4a4a4a;
+}
+
+/* Layout for flex */
+.layout-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.layout-flex .container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.layout-flex .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout-flex .bottom-content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.layout-flex .button {
+    width: max-content;
+    align-self: center;
+}
+
+.layout-flex .copyright-content {
+    width: 100%;
+}
+
+/* Layout for Float */
+.layout-float {
+    display: block;
+}
+
+.layout-float .container {
+    display: block;
+}
+
+.layout-float .side-bar {
+    float: left;
+}
+
+.layout-float .main-content {
+    float: left;
+    width: 70%;
+}
+
+.clear {
+    clear: both;
+}
