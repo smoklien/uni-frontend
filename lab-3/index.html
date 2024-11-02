@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Second Lab with HTML">
+    <meta name="keywords" content="HTML, CSS">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Lab 3</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Staatliches&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inclusive Sans&display=swap">
+</head>
+
+<body>
+    <div class="toggle-layout">
+        <a class="button" id="layoutToggle">Switch to Float</a>
+    </div>
+
+    <div class="container layout-float">
+        <div class="side-bar"></div>
+
+        <div class="main-content">
+            <p class="heading">UNIT.City</p>
+            <p>by Borys Piddubnyi</p>
+        </div>
+
+        <div class="clear"></div>
+
+        <div class="bottom-content">
+            <a class="button" href="https://lightroom.adobe.com/u/">Explore More</a>
+        </div>
+
+        <div class="copyright-content">
+            <p>Copyright © 2024 Borys Piddubnyi. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    document.getElementById("layoutToggle").addEventListener("click", function () {
+        const container = document.querySelector(".container");
+        const button = document.getElementById("layoutToggle");
+
+        if (container.classList.contains("layout-flex")) {
+            container.classList.remove("layout-flex");
+            container.classList.add("layout-float");
+            button.textContent = "Switch to Flex";
+        } else {
+            container.classList.remove("layout-float");
+            container.classList.add("layout-flex");
+            button.textContent = "Switch to Float";
+        }
+    });
+
+</script>
+
+</html>
