@@ -1,15 +1,25 @@
 const fifthElement = document.getElementById("fifth");
-const sixthElement = document.querySelector(".sixth");
+const sixthElement = document.querySelector("#sixth");
 
-let isActiveFifth = false;
-let isActiveSixth = false;
+let firstElementClicked = false;
+let secondElementClicked = false;
 
 fifthElement.addEventListener("click", () => {
-    isActiveFifth = !isActiveFifth;
-    fifthElement.classList.toggle("active-background", isActiveFifth);
+    if (!firstElementClicked) {
+        fifthElement.classList.add('first-click');
+        firstElementClicked = true;
+    } else {
+        fifthElement.classList.toggle('second-click');
+        firstElementClicked = false;
+    }
 });
 
 sixthElement.addEventListener("click", () => {
-    isActiveSixth = !isActiveSixth;
-    sixthElement.classList.toggle("active-background", isActiveSixth);
+    if (!secondElementClicked) {
+        sixthElement.classList.add('first-click');
+        secondElementClicked = true;
+    } else {
+        sixthElement.classList.toggle('second-click');
+        secondElementClicked = false;
+    }
 });
