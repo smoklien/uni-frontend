@@ -1,0 +1,28 @@
+img {
+    transition: transform 0.3s ease;
+}
+
+.color-blue {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.color-red {
+    background-color: lightcoral;
+    color: darkred;
+}
+
+.color-green {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.color-orange {
+    background-color: lightgoldenrodyellow;
+    color: darkorange;
+}
+
+.standart-color {
+    background-color: white;
+    color: black;
+}
