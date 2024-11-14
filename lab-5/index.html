@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Second Lab with HTML">
+    <meta name="keywords" content="HTML, CSS">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <title>Lab 5</title>
+</head>
+
+<body>
+    <!-- RegEx and form submission task -->
+    <div class="submission-form-container">
+        <h2>Submission Form</h2>
+
+        <form id="submissionForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="e.g., Порошенко П.О." required>
+            <div class="error-message" id="fullNameError">Please enter a valid full name.</div>
+
+            <label for="idCard">ID Card</label>
+            <input type="text" id="idCard" name="idCard" placeholder="e.g., ІН №123456" required>
+            <div class="error-message" id="idCardError">Please enter a valid ID.</div>
+
+            <label for="faculty">Faculty</label>
+            <input type="text" id="faculty" name="faculty" placeholder="e.g., ФІОТ" required>
+            <div class="error-message" id="facultyError">Please enter a valid faculty name.</div>
+
+            <label for="birthdate">Birthdate</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+            <div class="error-message" id="birthdateError">Please select a birthdate.</div>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="e.g., м. Київ" required>
+            <div class="error-message" id="addressError">Please enter a valid address.</div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Divider -->
+    <div class="dividing-line"></div>
+
+    <!-- Events task -->
+    <div class="interactive-table-container">
+        <h2>Interactive Table</h2>
+
+        <div class="color-picker-container">
+            <label for="colorPicker">Choose a color: </label>
+            <input type="color" id="colorPicker" name="colorPicker">
+        </div>
+
+        <div class="table-container">
+            <table id="numberTable"></table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
