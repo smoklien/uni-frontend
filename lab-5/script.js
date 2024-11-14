@@ -53,6 +53,85 @@ class FormValidator {
     }
 }
 
+
+class InteractiveNumberTable {
+    constructor(table, colorPicker) {
+        this.table = table;
+        this.colorPicker = colorPicker;
+        this.size = 6;
+        this.targerCellNumber = 4;
+        this.initTable();
+    }
+
+    initTable() {
+        let number = 1;
+
+        for (let i = 0; i < this.size; i++) {
+            const row = this.table.insertRow();
+            for (let j = 0; j < this.size; j++) {
+                const cell = row.insertCell();
+                cell.textContent = number;
+                cell.dataset.number = number;
+
+                if (number === this.targerCellNumber) {
+                    this.addTargetCellEvents(cell);
+                }
+
+                number++;
+            }
+        }
+    }
+
+    addTargetCellEvents(cell) {
+        cell.addEventListener('mouseover', () => this.changeToRandomColor(cell));
+        cell.addEventListener('click', () => this.changeToPickedColor(cell));
+        cell.addEventListener('dblclick', () => this.changeDiagonalColors(cell));
+    }
+
+    changeToRandomColor(cell) {
+        cell.style.backgroundColor = this.getRandomColor();
+    }
+
+    changeToPickedColor(cell) {
+        cell.style.backgroundColor = this.colorPicker.value;
+    }
+
+    changeDiagonalColors(centerCell) {
+        const color = this.getRandomColor();
+        const centerNumber = parseInt(centerCell.dataset.number);
+
+        this.getAllCells().forEach(cell => {
+            if (this.isSideDiagonal(centerNumber, parseInt(cell.dataset.number))) {
+                cell.style.backgroundColor = color;
+            }
+        });
+    }
+
+    isSideDiagonal(center, cellNumber) {
+        const centerRow = Math.floor((center - 1) / this.size);
+        const centerCol = (center - 1) % this.size;
+
+        const cellRow = Math.floor((cellNumber - 1) / this.size);
+        const cellCol = (cellNumber - 1) % this.size;
+
+        return (centerRow - centerCol === cellRow - cellCol) ||
+            (centerRow + centerCol === cellRow + cellCol);
+    }
+
+    getAllCells() {
+        return Array.from(this.table.getElementsByTagName('td'));
+    }
+
+    /**
+     * Generates a random hexadecimal color code.
+     *
+     * @returns {string} A random hexadecimal color code, e.g., '#FF00FF'.
+     */
+    getRandomColor() {
+        return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    }
+}
+
 const validationPatterns = {
     fullName: /^[А-ЯІЇЄҐ][а-яіїєґ]+\s[А-ЯІЇЄҐ]\.[А-ЯІЇЄҐ]\.$/,
     idCard: /^[а-яіїєґА-ЯІЇЄҐ]{2}\s№\d{6}$/,
@@ -62,6 +141,9 @@ const validationPatterns = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+    const table = document.getElementById("numberTable");
+    const colorPicker = document.getElementById("colorPicker");
+
     const submissionForm = document.getElementById('submissionForm');
     const formValidationData = [
         {
@@ -91,5 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
+    new InteractiveNumberTable(table, colorPicker);
     new FormValidator(submissionForm, formValidationData);
 });

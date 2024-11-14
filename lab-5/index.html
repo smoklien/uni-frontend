@@ -50,14 +50,17 @@
     <div class="dividing-line"></div>
 
     <!-- Events task -->
-    <div class="table-container">
-        <input type="color" id="colorPicker" name="colorPicker">
+    <div class="interactive-table-container">
+        <h2>Interactive Table</h2>
 
-        <table>
-            <tr>
-                <th></th>
-            </tr>
-        </table>
+        <div class="color-picker-container">
+            <label for="colorPicker">Choose a color: </label>
+            <input type="color" id="colorPicker" name="colorPicker">
+        </div>
+
+        <div class="table-container">
+            <table id="numberTable"></table>
+        </div>
     </div>
 
     <script src="script.js"></script>
