@@ -1,7 +1,7 @@
 const Header = () => (
-  <header>
-    <h2>Piddubnyi B.S.</h2>
-  </header>
+  <div id='headerComponent'>
+    <h1>BORYS S. PIDDUBNYI</h1>
+  </div>
 );
 
 export default Header;
