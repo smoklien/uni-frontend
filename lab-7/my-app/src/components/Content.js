@@ -1,8 +1,8 @@
-import { Component } from "react";
+import { Component } from 'react';
 
 class Content extends Component {
   state = {
-    colors: ["color-red", "color-blue", "color-orange", "color-green", "default-color"],
+    colors: ['default-color', 'color-red', 'color-blue', 'color-orange', 'color-green'],
     colorCounters: { hobbiesHeader: 0, hobbyItem: 0 },
   };
 
@@ -31,6 +31,7 @@ class Content extends Component {
 
         <h2
           id='hobbiesHeader'
+          className='default-color'
           onClick={() => this.handleColorChange('hobbiesHeader')}
         >
           My Hobbies
@@ -38,6 +39,7 @@ class Content extends Component {
         <ul>
           <li
             id='hobbyItem'
+            className='default-color'
             onClick={() => this.handleColorChange('hobbyItem')}
           >
             Photography and photo editing.
@@ -55,7 +57,7 @@ class Content extends Component {
 
         <p>
           I visited a couple corners of the Europe, therefore I cannot give any convenient answers. But for this
-          little moment, I prefer Kyiv for living due to its transport system{" "}
+          little moment, I prefer Kyiv for living due to its transport system{' '}
           <i>(subway, speed trams, etc.)</i>, rich architecture, opportunities and safeness.
         </p>
       </div>
