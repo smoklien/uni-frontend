@@ -51,7 +51,68 @@ img {
 
 #contentComponent {
   text-align: left;
-  padding: calc(10px + 1vmin) calc(10px + 40vmin);
+  margin: 50px 300px;
+}
+
+.heading {
+  padding: 50px;
+}
+
+.goods-gallery-container {
+  margin: 100px 300px;
+}
+
+/* .goods-gallery {
+  margin: 0 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: calc(10px + 5vmin);
+  justify-content: center;
+} */
+
+.goods-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* .goods-card-photo {
+  width: 300px;
+  height: 300px;
+} */
+
+.goods-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.goods-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.goods-card-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.goods-card-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.goods-card-price {
+  font-size: 1rem;
+  color: #555;
 }
 
 Button {
@@ -67,7 +128,6 @@ Button {
 }
 
 Button:hover {
-  background-color: #16ff64;
-  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.02);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }

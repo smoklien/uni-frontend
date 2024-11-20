@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Content from './components/Content';
 import Image from './components/Image';
+import GoodsGallery from './components/GoodsGallery';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         alt="Photo of Kyiv"
         width="700"
       />
+      <GoodsGallery />
     </div>
   );
 }
