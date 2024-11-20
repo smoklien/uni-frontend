@@ -1,0 +1,133 @@
+.App {
+  text-align: center;
+}
+
+img {
+  transition: transform 0.3s ease;
+}
+
+.color-blue {
+  background-color: lightblue;
+  color: darkblue;
+}
+
+.color-red {
+  background-color: lightcoral;
+  color: darkred;
+}
+
+.color-green {
+  background-color: lightgreen;
+  color: darkgreen;
+}
+
+.color-orange {
+  background-color: lightgoldenrodyellow;
+  color: darkorange;
+}
+
+.default-color {
+  background-color: white;
+  color: black;
+}
+
+#headerComponent {
+  padding-top: 1rem;
+}
+
+#imageControls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin: calc(10px + 1vmin);
+  gap: calc(5px + 1vmin);
+}
+
+#imageComponent {
+  margin: 20px;
+}
+
+#contentComponent {
+  text-align: left;
+  margin: 50px 300px;
+}
+
+.heading {
+  padding: 50px;
+}
+
+.goods-gallery-container {
+  margin: 100px 300px;
+}
+
+/* .goods-gallery {
+  margin: 0 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: calc(10px + 5vmin);
+  justify-content: center;
+} */
+
+.goods-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* .goods-card-photo {
+  width: 300px;
+  height: 300px;
+} */
+
+.goods-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.goods-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.goods-card-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.goods-card-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.goods-card-price {
+  font-size: 1rem;
+  color: #555;
+}
+
+Button {
+  background-color: #4df987;
+  color: #2b2b2b;
+  padding: 1rem 2rem;
+  font-size: calc(10px + 1vmin);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1000;
+}
+
+Button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
