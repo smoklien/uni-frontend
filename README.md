@@ -1,6 +1,6 @@
-# Basic Front End Technologies
+# Frontend Technologies
 
-This repository contains the source code for my Basic Front End Technologies lab works. Get access to various labs, explore their details, and utilize the provided resources to effectively complete your assignments.
+This repository contains the source code for my Frontend Technologies lab works. Get access to various labs, explore their details, and utilize the provided resources to effectively complete your assignments.
 
 # Repository Structure
 
